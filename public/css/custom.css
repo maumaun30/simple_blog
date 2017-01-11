@@ -1,0 +1,123 @@
+/*Universal*/
+.wd100P { width: 100%; }
+.wd120 { width: 120px; }
+.wd200 { width: 200px; }
+.wd500 { width: 500px; }
+.wd35P { width: 35%; }
+.wd-auto { width: auto; }
+
+.ht20 { height: 20px; }
+.ht25 { height: 25px; }
+.ht30 { height: 30px; }
+.ht34 { height: 34px; }
+.ht35 { height: 35px; }
+.ht50 { height: 50px; }
+.ht60 { height: 60px; }
+.ht70 { height: 70px; }
+.ht80 { height: 80px; }
+.ht100 { height: 100px !important; }
+.ht120 { height: 120px; }
+.ht150 { height: 150px !important; }
+.ht151 { height: 151px !important; }
+.ht230 { height: 230px; }
+.ht400 { height: 400px !important; }
+.ht500 { height: 500px !important; }
+
+.mgt-5 { margin-top: -5px; }
+.mg0 { margin: 0; }
+.mgt0 { margin-top: 0px; }
+.mgt3 { margin-top: 3px; }
+.mgt5 { margin-top: 5px; }
+.mgt10 { margin-top: 10px; }
+.mgt15 { margin-top: 15px; }
+.mgt20{ margin-top: 20px; }
+.mgt29{ margin-top: 29px; }
+.mgt30 { margin-top: 30px; }
+.mgt35 { margin-top: 35px; }
+.mgt40 { margin-top: 40px; }
+.mgt50 { margin-top: 50px; }
+.mgt60 { margin-top: 60px; }
+.mgt70 { margin-top: 70px; }
+.mgb0 { margin-bottom: 0px; }
+.mgb5 { margin-bottom: 5px; }
+.mgb10 { margin-bottom: 10px; }
+.mgb20 { margin-bottom: 20px; }
+.mgb25 { margin-bottom: 25px; }
+.mgb30 { margin-bottom: 30px; }
+.mgb40 { margin-bottom: 40px; }
+.mgl5 { margin-left: 5px; }
+.mgl10 { margin-left: 10px; }
+.mgl20 { margin-left: 20px; }
+.mgl30 { margin-left: 30px; }
+.mgl35 { margin-left: 35px; }
+.mgr10 { margin-right: 10px; }
+.mgr15 { margin-right: 15px !important; }
+.mgr20 { margin-right: 20px; }
+.mgr30 { margin-right: 30px !important; }
+.mgv0 { margin-top: 0px; margin-bottom: 0px; }
+.mgv5 { margin-top: 5px; margin-bottom: 5px; }
+.mgv10 { margin-top: 10px; margin-bottom: 10px; }
+.mgv15 { margin-top: 15px; margin-bottom: 15px; }
+.mgv20 { margin-top: 20px; margin-bottom: 20px; }
+.mgv30 { margin-top: 30px; margin-bottom: 30px; }
+.mgv40 { margin-top: 40px; margin-bottom: 40px; }
+.mgv50 { margin-top: 50px; margin-bottom: 50px; }
+.mgv100 { margin-top: 100px; margin-bottom: 100px; }
+.mgh0 { margin-right: 0; margin-left: 0; }
+.mgh5 { margin-right: 5px; margin-left: 5px; }
+.mgh15 { margin-right: 15px; margin-left: 15px; }
+.mg-auto { margin: 0 auto; }
+.mgr0 { margin-right: 0;}
+.mgl0 { margin-left: 0;}
+
+.pd0 { padding: 0 !important; }
+.pd5 { padding: 5px !important; }
+.pd10 { padding: 10px !important; }
+.pd15 { padding: 15px !important; }
+.pd20 { padding: 20px !important; }
+.pd30 { padding: 30px !important; }
+.pd45 { padding: 45px !important; }
+.pdt5 { padding-top: 5px; }
+.pdt7 { padding-top: 7px; }
+.pdt10 { padding-top: 10px; }
+.pdt15 { padding-top: 15px; }
+.pdt30 { padding-top: 30px; }
+.pdt40 { padding-top: 40px; }
+.pdt100 { padding-top: 100px; }
+.pdt200 { padding-top: 200px; }
+.pdb10 { padding-bottom: 10px; }
+.pdb15 { padding-bottom: 15px; }
+.pdb20 { padding-bottom: 20px; }
+.pdb40 { padding-bottom: 40px; }
+.pdb50 { padding-bottom: 50px; }
+.pdl0 { padding-left: 0 !important; }
+.pdl25 { padding-left: 25px !important; }
+.pdl30 { padding-left: 30px !important; }
+.pdr0 { padding-right: 0; }
+.pdr3 { padding-right: 0; }
+.pdh0 { padding-left: 0; padding-right: 0; }
+.pdh5 { padding-left: 5px !important; padding-right: 5px !important; }
+.pdh10 { padding-left: 10px !important; padding-right: 10px !important; }
+.pdh15 { padding-left: 15px !important; padding-right: 15px !important; }
+.pdh20 { padding-left: 20px; padding-right: 20px; }
+.pdh30{ padding-left: 30px !important; padding-right: 30px !important; }
+.pdh45{ padding-left: 45px !important; padding-right: 45px !important; }
+.pdh45 { padding-left: 45px; padding-right: 45px; }
+.pdv0 { padding-top: 0px !important; padding-bottom: 0px !important; }
+.pdv5 { padding-top: 5px !important; padding-bottom: 5px !important; }
+.pdv10 { padding-top: 10px !important; padding-bottom: 10px !important; }
+.pdv15 { padding-top: 15px; padding-bottom: 15px; }
+.pdv20 { padding-top: 20px; padding-bottom: 20px; }
+.pdv30 { padding-top: 30px; padding-bottom: 30px; }
+.pdv50 { padding-top: 50px; padding-bottom: 50px; }
+.pdv100 { padding-top: 100px; padding-bottom: 100px; }
+.pdv200 { padding-top: 200px; padding-bottom: 200px; }
+
+.pointer { cursor: pointer; }
+
+/*Custom*/
+.create-input {
+	border: none;
+	border-bottom: solid 2px #ccd0d2;
+	border-radius: 0;
+}
