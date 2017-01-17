@@ -55,12 +55,15 @@ class PostController extends Controller
             Image::make($request->file('image'))->resize(600,400)->save(public_path('img/uploads/thumbnails' . $file_name));            
         }
 
+        $user = Auth::user();
+
         $post = new Post;
-        $post->user_id = Auth::user()->id;
+        $post->user_id = $user->id;
         $post->title = $request->title;
         $post->subtitle = $request->subtitle;
         $post->body = $request->body;
         $post->image = $file_name;
+        $post->user = $user->name;
         $post->save();
 
         return redirect()->route('posts.show',$post->id);

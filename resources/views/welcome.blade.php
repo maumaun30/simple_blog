@@ -22,7 +22,7 @@
 
         @foreach($posts as $post)
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <a href="{{ route('posts.show',$post->id) }}">
                 <div class="row">
                     <div class="col-md-3">

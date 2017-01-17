@@ -38,7 +38,7 @@
 .mgt50 { margin-top: 50px; }
 .mgt60 { margin-top: 60px; }
 .mgt70 { margin-top: 70px; }
-.mgb0 { margin-bottom: 0px; }
+.mgb0 { margin-bottom: 0px !important; }
 .mgb5 { margin-bottom: 5px; }
 .mgb10 { margin-bottom: 10px; }
 .mgb20 { margin-bottom: 20px; }
@@ -253,7 +253,7 @@ footer .copyright {
   }
   .navbar-custom .navbar-brand {
     color: #333;
-    padding: 20px;
+    padding: 10px 20px;
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
@@ -261,7 +261,7 @@ footer .copyright {
   }
   .navbar-custom .nav li a {
     color: #333;
-    padding: 20px;
+    padding: 10px 20px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
