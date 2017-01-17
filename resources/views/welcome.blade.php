@@ -1,65 +1,50 @@
 @extends('layouts.app')
 
-@section('content')
-
-    @include('partials.header')
-
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+@section('header')
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    </div>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
             </div>
         </div>
+    </header>
+@stop
+
+@section('content')
+    <!-- Main Content -->
+    <div class="container">
+
+        @foreach($posts as $post)
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <a href="{{ route('posts.show',$post->id) }}">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{ asset('/img/uploads/thumbnails' . $post->image) }}" alt="{{ $post->image }}" class="img-responsive">
+                    </div>
+                    <div class="col-md-9">
+                        <span class="dp-bl fs30 fw800">
+                            {{ $post->title }}
+                        </span>
+                        <span class="dp-bl fs20 mgv10">
+                            {{ $post->subtitle }}
+                        </span>
+                    </div>
+                </div>
+                </a>
+                <span class="dp-bl fs15 text-muted pull-right">Posted by <a href="#">{{ $post->postUser->name }}</a> on {{ date_format($post->created_at, 'm d, Y') }}</span>     
+                <hr>                    
+            </div>
+        </div>
+        @endforeach
+
+        {{ $posts->links() }}
+
     </div>
 @stop

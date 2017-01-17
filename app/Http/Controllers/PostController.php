@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Auth;
+use Image;
 
 class PostController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -35,8 +41,29 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        Post::create($request->all());
-        return view('home');
+        // dd($request->all());
+        $this->validate($request, [
+            'title' => 'required|max:100|unique:posts,title',
+            'subtitle' => 'required|max:100',
+            'body' => 'required',
+            'image' => 'required|mimes:jpeg,png,gif',
+            ]);
+
+        if ($request->hasFile('image')) {
+            $file_name = time() . '.' . $request->file('image')->getClientOriginalExtension();
+            Image::make($request->file('image'))->save(public_path('img/uploads/' . $file_name));
+            Image::make($request->file('image'))->resize(600,400)->save(public_path('img/uploads/thumbnails' . $file_name));            
+        }
+
+        $post = new Post;
+        $post->user_id = Auth::user()->id;
+        $post->title = $request->title;
+        $post->subtitle = $request->subtitle;
+        $post->body = $request->body;
+        $post->image = $file_name;
+        $post->save();
+
+        return redirect()->route('posts.show',$post->id);
     }
 
     /**
@@ -47,7 +74,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+
+        return view('posts.show')->with('post',$post);
     }
 
     /**

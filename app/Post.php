@@ -25,4 +25,8 @@ class Post extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    public function postUser() {
+    	return $this->belongsTo('\App\User','user_id');
+    }
 }

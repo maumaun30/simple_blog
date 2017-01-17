@@ -13,11 +13,12 @@
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/clean-blog.min.css') }}" rel="stylesheet">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://use.fontawesome.com/45876f6f9c.js"></script>
 
     <!-- Scripts -->
     <script>
@@ -30,14 +31,14 @@
         
         @include('partials.nav')
 
+        @yield('header')
+
         @yield('content')
 
         @include('partials.footer')
 
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="{{ asset('/js/clean-blog.min.js') }}"></script>
+    @yield('scripts')
 </body>
 </html>
