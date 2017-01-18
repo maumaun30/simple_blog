@@ -12,7 +12,7 @@
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <span class="fw800">Reset Password Link</span>
+                        <span class="fw800">Resend Email Verification Link</span>
                     </div>
                     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                         <input id="email" type="email" class="form-control create-input" name="email" value="{{ old('email') }}" required placeholder="Email address">

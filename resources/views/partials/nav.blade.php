@@ -3,6 +3,14 @@
         <ul class="list-inline navigation fs12">
             <li><a href="#">Search</a></li>
             @if(Auth::user())
+                @if(!Auth::user()->confirmed())
+                    <li><a href="#">Confirm your email address</a></li>
+                @endif
+            @endif
+            @if(Auth::guest())
+                <li><a href="{{ url('/login') }}">Login</a></li>
+                <li class="hidden"><a href="{{ url('/register') }}">Register</a></li>
+            @else
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="fs12"> 
@@ -26,10 +34,6 @@
                         </li>
                     </ul>
                 </li>
-            @endif
-            @if(Auth::guest())
-                <li><a href="{{ url('/login') }}">Login</a></li>
-                <li class="hidden"><a href="{{ url('/register') }}">Register</a></li>
             @endif
         </ul>
     </div>
