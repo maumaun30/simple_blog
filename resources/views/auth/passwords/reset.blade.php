@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container fs15">
-        <div class="row mgt70">
+    <div class="container fs15 resp-mgt70">
+        <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 @if (session('status'))
                     <div class="alert alert-success">

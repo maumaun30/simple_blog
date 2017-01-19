@@ -1,0 +1,1 @@
+<a href="{{ url('confirm/email',encrypt($user->id)) }}">Click here to confirm email address</a>

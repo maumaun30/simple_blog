@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container fs15">
-        <div class="row mgt70">
+    <div class="container fs15 resp-mgt70">
+        <div class="row">
 
-            <div class="col-md-4 col-md-offset-2 pdr45">
+            <div class="col-md-4 col-md-offset-2 pdt15 pdr45 bdl1">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                     {{ csrf_field() }}
                     <div class="form-group">
@@ -42,7 +42,7 @@
                 </form>
             </div>
 
-            <div class="col-md-4 pdl45">
+            <div class="col-md-4 pdt15 pdl45 bdl1">
                 <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                     {{ csrf_field() }}
                     <div class="form-group">

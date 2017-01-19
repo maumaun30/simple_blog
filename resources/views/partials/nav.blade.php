@@ -1,27 +1,27 @@
 <div class="container-fluid ff-source-sans">
     <div class="pull-right pdt10">
         <ul class="list-inline navigation fs12">
-            <li><a href="#">Search</a></li>
+            <li class="bdl1"><a href="#">Search</a></li>
             @if(Auth::user())
                 @if(!Auth::user()->confirmed())
-                    <li><a href="#">Confirm your email address</a></li>
+                    <li><a href="{{ url('/confirm') }}">Confirm your email address</a></li>
                 @endif
             @endif
             @if(Auth::guest())
-                <li><a href="{{ url('/login') }}">Login</a></li>
+                <li class="bdl1"><a href="{{ url('/login') }}">Login</a></li>
                 <li class="hidden"><a href="{{ url('/register') }}">Register</a></li>
             @else
-                <li class="dropdown">
+                <li class="bdl1"><a href="{{ route('profile',Auth::user()->username) }}">{{ ucfirst(Auth::user()->name) }}</a></li>
+                <li class="dropdown bdl1">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="fs12"> 
-                            <span class="fa fa-user"></span>
-                            {{ ucfirst(Auth::user()->name) }}
+                            <span class="fa fa-gear"></span>
                             <span class="caret"></span>
                         </span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="{{ route('posts.create') }}">Create Post</a></li>
-                        <li>
+                        <li class="bdb1"><a href="{{ route('posts.create') }}">Create Post</a></li>
+                        <li class="bdb1">
                             <a href="{{ url('/logout') }}"
                                 onclick="event.preventDefault();
                                          document.getElementById('logout-form').submit();">

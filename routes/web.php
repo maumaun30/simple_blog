@@ -13,6 +13,12 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@welcome');
+Route::get('/', 'HomeController@welcome')->name('home');
 
 Route::resource('posts', 'PostController');
+
+Route::get('profile/{username}', 'UserController@profile')->name('profile');
+
+Route::get('/confirm', 'UserController@confirmView');
+Route::get('send/confirm/email/{id}', 'UserController@sendConfirmEmail')->name('send/confirm/email');
+Route::get('confirm/email/{id}', 'UserController@confirmEmail');

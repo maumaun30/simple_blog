@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Mail;
 
 class RegisterController extends Controller
 {
@@ -63,11 +64,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        Mail::send('auth.confirm.mail', ['user' => $user], function ($m) use ($user) {
+        $m->from('simpleblog@app.com', 'SimpleBlog');
+
+        $m->to($user->email, $user->name)->subject('Confirm Email Address');
+        });
+
+        return $user;
     }
 }
