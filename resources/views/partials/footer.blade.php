@@ -1,35 +1,37 @@
 <!-- Footer -->
 <footer>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
+            <div class="col-lg-4">
+                <ul class="list-inline footer-li">
+                    <li>
+                        <a href="#">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms & Condition</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-4 text-right">
+                <ul class="list-inline">
                     <li>
                         <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <i class="fa fa-facebook-square fa-2x"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <i class="fa fa-twitter-square fa-2x"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
+                            <i class="fa fa-tumblr-square fa-2x"></i>
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
             </div>
         </div>
     </div>

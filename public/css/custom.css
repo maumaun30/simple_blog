@@ -142,6 +142,8 @@
 }
 
 .fw300 { font-weight: 300; }
+.fw400 { font-weight: 400; }
+.fw600 { font-weight: 600; }
 .fw800 { font-weight: 800; }
 
 .pointer { cursor: pointer; }
@@ -160,6 +162,7 @@ body {
 p {
   line-height: 1.5;
   margin: 30px 0;
+  word-wrap: break-word;
 }
 h1,
 h2,
@@ -185,20 +188,16 @@ hr.small {
   border-color: white;
 }
 footer {
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
   position: absolute;
   bottom: 0; left: 0;
   width: 100%;
-  height: 200px;
-}
-footer .list-inline {
-  margin: 0;
-  padding: 0;
-}
-footer .copyright {
   font-size: 14px;
-  text-align: center;
-  margin-bottom: 0;
+  /*height: 200px;*/
+}
+.footer-li {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -251,28 +250,33 @@ footer .copyright {
 .navigation li {
 	padding: 0 20px;
 }
+.navbar {
+  margin-bottom: 0 !important;
+}
 .navbar-custom {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 3;
+  background-color: #f5f8fa;
   margin-bottom: 0;
+  font-size: 14px !important;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  font-size: 14px;
 }
 .navbar-custom .navbar-header .navbar-toggle {
   color: #777777;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 12px;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
   font-weight: 800;
+  font-size: 12px;
   letter-spacing: 1px;
 }
 @media only screen and (min-width: 768px) {
@@ -282,7 +286,8 @@ footer .copyright {
   }
   .navbar-custom .navbar-brand {
     color: #333;
-    padding: 10px 20px;
+    text-transform: uppercase;
+    /*padding: 10px 20px;*/
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
@@ -290,7 +295,7 @@ footer .copyright {
   }
   .navbar-custom .nav li a {
     color: #333;
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
@@ -299,7 +304,7 @@ footer .copyright {
 }
 @media only screen and (min-width: 1170px) {
   .navbar-brand {
-    margin-top: -35px;
+    /*margin-top: -35px;*/
   }
   .resp-mgt70 {
     margin-top: 70px;
@@ -360,18 +365,37 @@ footer .copyright {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  z-index: 0;
+  color: #222;
+}
+.intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  background: -webkit-gradient(linear, left 50%, left bottom, from(rgba(0,0,0,0)), to(rgba(245, 248, 250,1)));
+}
+.post-heading {
+  position: relative;
+  z-index: 1;
+}
+.title-heading {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
-  color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 300px 0 0;
   }
 }
 .intro-header .site-heading,
@@ -386,7 +410,7 @@ footer .copyright {
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
   font-size: 24px;
-  line-height: 1.1;
+  line-height: 1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -409,7 +433,7 @@ footer .copyright {
 .intro-header .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
-  margin: 10px 0 30px;
+  /*margin: 10px 0 30px;*/
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
@@ -419,7 +443,8 @@ footer .copyright {
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+  color: #777;
+  text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {

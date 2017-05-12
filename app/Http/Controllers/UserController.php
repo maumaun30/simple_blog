@@ -61,4 +61,31 @@ class UserController extends Controller
 
         return view('auth.user.profile')->with('user', $user);
     }
+
+    public function nameUpdate(Request $request, $id) {
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->update();
+
+        return response()->json(['name' => $user->name], 200);
+    }
+
+    public function titleUpdate(Request $request, $id) {
+        $user = User::find($id);
+
+        $user->title = $request->title;
+        $user->update();
+
+        return response()->json(['title' => $user->title], 200);
+    }
+
+    public function descriptionUpdate(Request $request, $id) {
+        $user = User::find($id);
+
+        $user->description = $request->description;
+        $user->update();
+
+        return response()->json(['description' => $user->description], 200);
+    }
 }

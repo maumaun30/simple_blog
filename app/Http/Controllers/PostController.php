@@ -52,7 +52,7 @@ class PostController extends Controller
         if ($request->hasFile('image')) {
             $file_name = time() . '.' . $request->file('image')->getClientOriginalExtension();
             Image::make($request->file('image'))->save(public_path('img/uploads/' . $file_name));
-            Image::make($request->file('image'))->resize(600,400)->save(public_path('img/uploads/thumbnails' . $file_name));            
+            Image::make($request->file('image'))->resize(600,400)->save(public_path('img/uploads/thumbnails/' . $file_name));            
         }
 
         $user = Auth::user();
